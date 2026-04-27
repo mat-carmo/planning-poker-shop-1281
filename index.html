@@ -21,48 +21,38 @@
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); min-height:100vh; }
-
   .header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 20px 32px; }
   .header h1 { font-size: 1.4rem; font-weight: 600; }
   .header h1 span { color: var(--accent2); }
   .header p { color: var(--text2); margin-top: 4px; font-size: 0.9rem; }
-
   .container { max-width: 1400px; margin: 0 auto; padding: 24px; }
-
   .dev-setup { display: flex; gap: 16px; margin-bottom: 24px; align-items: flex-end; flex-wrap: wrap; }
   .dev-setup .field label { display: block; color: var(--text2); font-size: 0.8rem; margin-bottom: 4px; }
   .dev-setup input { background: var(--surface); border: 1px solid var(--border); color: var(--text); padding: 8px 12px; border-radius: 8px; font-size: 0.9rem; width: 160px; }
   .dev-setup input[type=date] { width: 170px; }
   .dev-setup input[type=number] { width: 60px; }
   .dev-setup input:focus { outline: none; border-color: var(--accent); }
-
   .tabs { display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
   .tab { padding: 8px 16px; border-radius: 8px; background: var(--surface); border: 1px solid var(--border); color: var(--text2); cursor: pointer; font-size: 0.85rem; transition: all .2s; }
   .tab:hover { border-color: var(--accent); color: var(--text); }
   .tab.active { background: var(--accent); border-color: var(--accent); color: #fff; }
   .tab .badge { background: var(--green); color: #000; font-size: 0.7rem; padding: 1px 6px; border-radius: 10px; margin-left: 6px; font-weight: 700; }
-
   .panel { display: none; }
   .panel.active { display: block; }
-
   .task-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 16px; }
   .task-card h3 { font-size: 1rem; margin-bottom: 4px; }
   .task-card h3 a { color: var(--accent2); text-decoration: none; }
   .task-card h3 a:hover { text-decoration: underline; }
   .task-card .task-key { color: var(--text2); font-size: 0.8rem; margin-bottom: 12px; }
-
   .vote-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .vote-col { background: var(--surface2); border-radius: 8px; padding: 14px; }
   .vote-col .dev-name { font-size: 0.8rem; color: var(--accent2); font-weight: 600; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
-
   .vote-row { margin-bottom: 12px; }
   .vote-row label { display: block; font-size: 0.78rem; color: var(--text2); margin-bottom: 4px; }
-
   .fib-btns { display: flex; gap: 4px; flex-wrap: wrap; }
   .fib-btn { width: 36px; height: 36px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg); color: var(--text); cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: all .15s; }
   .fib-btn:hover { border-color: var(--accent); transform: translateY(-2px); }
   .fib-btn.selected { background: var(--accent); border-color: var(--accent); color: #fff; }
-
   .pri-btns { display: flex; gap: 4px; flex-wrap: wrap; }
   .pri-btn { padding: 6px 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg); color: var(--text); cursor: pointer; font-size: 0.78rem; font-weight: 600; transition: all .15s; }
   .pri-btn:hover { transform: translateY(-2px); }
@@ -72,7 +62,6 @@
   .pri-btn[data-val="3"].selected { background: var(--orange); border-color: var(--orange); color: #000; }
   .pri-btn[data-val="2"].selected { background: var(--blue); border-color: var(--blue); }
   .pri-btn[data-val="1"].selected { background: var(--text2); border-color: var(--text2); }
-
   .results-strip { margin-top: 14px; display: flex; gap: 16px; align-items: center; padding: 10px 14px; background: var(--bg); border-radius: 8px; flex-wrap: wrap; }
   .result-item { font-size: 0.82rem; color: var(--text2); }
   .result-item .val { font-size: 1.1rem; font-weight: 700; }
@@ -83,15 +72,12 @@
   .consensus { font-size: 0.75rem; padding: 3px 8px; border-radius: 6px; font-weight: 600; }
   .consensus.yes { background: rgba(0,184,148,.15); color: var(--green); }
   .consensus.no { background: rgba(225,112,85,.15); color: var(--red); }
-
-  /* Dashboard */
   .summary-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 28px; }
   .summary-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; text-align: center; }
   .summary-card .label { font-size: 0.78rem; color: var(--text2); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
   .summary-card .value { font-size: 2rem; font-weight: 700; }
   .summary-card .sub { font-size: 0.82rem; color: var(--text2); margin-top: 4px; }
   .summary-card .deadline { font-size: 1.1rem; font-weight: 700; color: var(--green); margin-top: 6px; }
-
   .priority-table { width: 100%; border-collapse: collapse; }
   .priority-table th { text-align: left; padding: 10px 12px; background: var(--surface2); color: var(--text2); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.5px; }
   .priority-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); font-size: 0.88rem; }
@@ -101,10 +87,8 @@
   .rank.r2 { background: #e67e22; color: #fff; }
   .rank.r3 { background: var(--orange); color: #000; }
   .rank.rn { background: var(--surface2); color: var(--text2); }
-
   .score-bar { height: 6px; border-radius: 3px; background: var(--border); position: relative; min-width: 80px; }
   .score-bar-fill { height: 100%; border-radius: 3px; transition: width .3s; }
-
   .timeline-block { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 16px; }
   .timeline-block h4 { color: var(--accent2); margin-bottom: 12px; font-size: 0.95rem; }
   .tl-item { display: flex; gap: 10px; align-items: center; padding: 6px 0; font-size: 0.85rem; border-bottom: 1px solid var(--border); }
@@ -114,29 +98,55 @@
   .tl-item .tl-name { flex: 1; color: var(--text2); }
   .tl-item .tl-days { min-width: 60px; text-align: right; color: var(--blue); font-weight: 600; }
   .tl-item .tl-acc { min-width: 90px; text-align: right; font-size: 0.78rem; color: var(--text2); }
-
   .legend { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 24px; }
   .legend h3 { font-size: 0.9rem; margin-bottom: 12px; }
   .legend-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
   .legend-col h4 { font-size: 0.8rem; color: var(--accent2); margin-bottom: 8px; text-transform: uppercase; }
   .legend-item { display: flex; gap: 8px; align-items: center; margin-bottom: 4px; font-size: 0.82rem; color: var(--text2); }
   .legend-item strong { color: var(--text); min-width: 24px; }
-
   .formula-box { background: var(--surface2); border-radius: 8px; padding: 16px; margin: 16px 0; font-size: 0.85rem; line-height: 1.7; }
   .formula-box code { background: var(--bg); padding: 2px 8px; border-radius: 4px; color: var(--accent2); font-size: 0.9em; }
-
   .actions { display: flex; gap: 12px; margin: 24px 0; flex-wrap: wrap; }
   .btn { padding: 10px 20px; border-radius: 8px; border: none; cursor: pointer; font-size: 0.88rem; font-weight: 600; transition: all .15s; }
   .btn:hover { transform: translateY(-1px); }
   .btn-primary { background: var(--accent); color: #fff; }
   .btn-secondary { background: var(--surface2); color: var(--text); border: 1px solid var(--border); }
   .btn-danger { background: var(--red); color: #fff; }
-
   .toast { position: fixed; bottom: 24px; right: 24px; background: var(--green); color: #000; padding: 12px 20px; border-radius: 8px; font-weight: 600; font-size: 0.88rem; transform: translateY(100px); opacity: 0; transition: all .3s; z-index: 999; }
   .toast.show { transform: translateY(0); opacity: 1; }
-
+  .sync-indicator { position: fixed; top: 12px; right: 16px; font-size: 0.75rem; padding: 4px 10px; border-radius: 6px; z-index: 999; }
+  .sync-indicator.saving { background: var(--orange); color: #000; }
+  .sync-indicator.saved { background: var(--green); color: #000; }
+  .sync-indicator.error { background: var(--red); color: #fff; }
+  .sync-indicator.loading { background: var(--blue); color: #000; }
   .nav-btns { display: flex; justify-content: space-between; margin-top: 16px; }
-
+  .status-toggle { display: inline-flex; align-items: center; gap: 10px; margin-left: 12px; cursor: pointer; font-size: 0.82rem; user-select: none; }
+  .status-toggle input { display: none; }
+  .toggle-label-left, .toggle-label-right { font-size: 0.78rem; font-weight: 600; transition: color .2s; }
+  .toggle-label-left { color: var(--orange); }
+  .toggle-label-right { color: var(--text2); }
+  .toggle-label-left.inactive { color: var(--text2); }
+  .toggle-label-right.active { color: var(--green); }
+  .toggle-track { width: 40px; height: 22px; border-radius: 11px; background: var(--orange); position: relative; transition: background .2s; flex-shrink: 0; }
+  .toggle-track.done { background: var(--green); }
+  .toggle-thumb { width: 18px; height: 18px; border-radius: 50%; background: #fff; position: absolute; top: 2px; left: 2px; transition: left .2s; }
+  .toggle-track.done .toggle-thumb { left: 20px; }
+  .task-done-banner { background: rgba(0,184,148,.1); border: 1px solid var(--green); border-radius: 8px; padding: 8px 14px; margin-bottom: 12px; font-size: 0.85rem; color: var(--green); font-weight: 600; }
+  .burndown-container { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 24px; }
+  .burndown-container h2 { font-size: 1.1rem; margin-bottom: 8px; }
+  .burndown-container .bsub { font-size: 0.82rem; color: var(--text2); margin-bottom: 20px; }
+  .burndown-canvas { width: 100%; background: var(--bg); border-radius: 8px; }
+  .burndown-legend { display: flex; gap: 24px; margin-top: 12px; font-size: 0.8rem; color: var(--text2); }
+  .burndown-legend-item { display: flex; align-items: center; gap: 6px; }
+  .burndown-legend-dot { width: 12px; height: 4px; border-radius: 2px; }
+  .burndown-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 20px; }
+  .bd-stat { background: var(--surface2); border-radius: 8px; padding: 14px; text-align: center; }
+  .bd-stat .bd-label { font-size: 0.72rem; color: var(--text2); text-transform: uppercase; margin-bottom: 4px; }
+  .bd-stat .bd-val { font-size: 1.4rem; font-weight: 700; }
+  .done-list-item { display: flex; align-items: center; gap: 8px; padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 0.85rem; }
+  .done-list-item:last-child { border-bottom: none; }
+  .done-list-item .done-key { font-weight: 700; min-width: 90px; }
+  .done-list-item .done-pts { min-width: 50px; text-align: right; color: var(--blue); font-weight: 600; }
   @media (max-width: 768px) {
     .vote-grid { grid-template-columns: 1fr; }
     .legend-grid { grid-template-columns: 1fr; }
@@ -145,15 +155,11 @@
 </style>
 </head>
 <body>
-
 <div class="header">
   <h1><span>SHOP-1281</span> — Planning Poker: Sub Home Recarga</h1>
   <p>3 devs votam complexidade + prioridade &rarr; calcula prazo final e ordem de execucao</p>
 </div>
-
 <div class="container">
-
-  <!-- Config -->
   <div class="dev-setup">
     <div class="field"><label>Dev 1</label><input type="text" id="dev1name" value="Dev 1" oninput="updateDevNames()"></div>
     <div class="field"><label>Dev 2</label><input type="text" id="dev2name" value="Dev 2" oninput="updateDevNames()"></div>
@@ -161,8 +167,6 @@
     <div class="field"><label>Devs alocados</label><input type="number" id="devCount" value="3" min="1" max="10" oninput="recalcAll()"></div>
     <div class="field"><label>Data inicio</label><input type="date" id="startDate" oninput="recalcAll()"></div>
   </div>
-
-  <!-- Legend -->
   <div class="legend">
     <h3>Como funciona</h3>
     <div class="legend-grid">
@@ -193,464 +197,58 @@
       Data final = data inicio + dias uteis calculados (pula sabado/domingo/feriados)
     </div>
   </div>
-
-  <!-- Tabs -->
   <div class="tabs" id="tabs"></div>
-
-  <!-- Voting panels -->
   <div id="panels"></div>
-
-  <!-- Dashboard -->
   <div class="panel" id="dashboard-panel"></div>
-
-  <!-- Actions -->
+  <div class="panel" id="burndown-panel"></div>
   <div class="actions">
     <button class="btn btn-primary" onclick="switchTab('dash')">Ver Dashboard / Prazo</button>
     <button class="btn btn-secondary" onclick="saveState()">Salvar Progresso</button>
     <button class="btn btn-secondary" onclick="exportCSV()">Exportar CSV</button>
     <button class="btn btn-danger" onclick="resetAll()">Resetar Votos</button>
   </div>
-
 </div>
-
 <div class="toast" id="toast"></div>
-
+<div class="sync-indicator loading" id="syncStatus">Carregando...</div>
 <script>
-const TASKS = [
-  { key: 'SHOP-1283', summary: 'Criar documentacao sobre o projeto' },
-  { key: 'SHOP-1284', summary: 'Criar microsservico no Moonlight' },
-  { key: 'SHOP-1285', summary: 'Levantar endpoints do Houston para manipular audiencia' },
-  { key: 'SHOP-1286', summary: 'Pedir para criar banco de dados (Mongo)' },
-  { key: 'SHOP-1287', summary: 'Criar SQS para ler do SNS do Core' },
-  { key: 'SHOP-1288', summary: 'Definir estrutura dos dados no banco de dados' },
-  { key: 'SHOP-1289', summary: 'Criar Worker para ficar lendo as mensagens do SQS' },
-  { key: 'SHOP-1290', summary: 'Criar Worker para remover usuarios da audiencia' },
-  { key: 'SHOP-1291', summary: 'Criar solucao para reprocessamento dos casos com falha na inclusao das audiencias' },
-  { key: 'SHOP-1292', summary: 'Criar endpoint de envio para audiencia' },
-  { key: 'SHOP-1293', summary: 'Criar endpoint para remocao de audiencia' },
-  { key: 'SHOP-1294', summary: 'Criar TTL no banco de dados' },
-  { key: 'SHOP-1295', summary: 'Criar endpoint para definir se o usuario pode usar a campanha' },
-  { key: 'SHOP-1296', summary: 'Validar o uso do SDD no projeto' },
-  { key: 'SHOP-1298', summary: 'Criar metricas, dashboards e alertas' },
-  { key: 'SHOP-1301', summary: 'Reprocessamento das Falhas de Remover da audiencia' },
-  { key: 'SHOP-1302', summary: 'rollout para PROD' },
-  { key: 'SHOP-1303', summary: 'Adicionar tags na infra do projeto' },
-  { key: 'SHOP-1304', summary: 'Criar runbooks no Hoop' },
-  { key: 'SHOP-1305', summary: 'Criar Appsmith' },
-];
-
-const FIB = [1, 2, 3, 5, 8, 13, 21];
-const PRI = [
-  { val: 5, label: 'Critica' },
-  { val: 4, label: 'Alta' },
-  { val: 3, label: 'Media' },
-  { val: 2, label: 'Baixa' },
-  { val: 1, label: 'Opcional' },
-];
-
-// Brazilian holidays 2025/2026 (add more as needed)
-const HOLIDAYS = new Set([
-  '2025-01-01','2025-03-03','2025-03-04','2025-04-18','2025-04-21','2025-05-01',
-  '2025-06-19','2025-09-07','2025-10-12','2025-11-02','2025-11-15','2025-11-20','2025-12-25',
-  '2026-01-01','2026-02-16','2026-02-17','2026-04-03','2026-04-21','2026-05-01',
-  '2026-06-04','2026-09-07','2026-10-12','2026-11-02','2026-11-15','2026-11-20','2026-12-25',
-]);
-
-let votes = TASKS.map(() => [
-  { complexity: null, priority: null },
-  { complexity: null, priority: null },
-  { complexity: null, priority: null },
-]);
-
-// Old task keys in original order (for migration)
-const OLD_KEYS = [
-  'SHOP-1283','SHOP-1284','SHOP-1285','SHOP-1286','SHOP-1287','SHOP-1288',
-  'SHOP-1289','SHOP-1290','SHOP-1291','SHOP-1292','SHOP-1293','SHOP-1294',
-  'SHOP-1295','SHOP-1296','SHOP-1298'
-];
-
-function init() {
-  const today = new Date();
-  document.getElementById('startDate').value = today.toISOString().split('T')[0];
-  loadState();
-  renderTabs();
-  renderPanels();
-  switchTab(0);
-}
-
-function renderTabs() {
-  const el = document.getElementById('tabs');
-  let html = '';
-  TASKS.forEach((t, i) => {
-    const done = isTaskVoted(i);
-    html += `<div class="tab" data-idx="${i}" onclick="switchTab(${i})">${t.key}${done ? '<span class="badge">OK</span>' : ''}</div>`;
-  });
-  html += `<div class="tab" data-idx="dash" onclick="switchTab('dash')" style="background:var(--green);color:#000;border-color:var(--green);font-weight:700">PRAZO FINAL</div>`;
-  el.innerHTML = html;
-}
-
-function isTaskVoted(ti) {
-  return votes[ti].every(d => d.complexity !== null && d.priority !== null);
-}
-
-function getDevName(di) {
-  return document.getElementById(`dev${di+1}name`)?.value || `Dev ${di+1}`;
-}
-
-function updateDevNames() {
-  for (let di = 0; di < 3; di++) {
-    document.querySelectorAll(`.dev-label-${di}`).forEach(el => el.textContent = getDevName(di));
-  }
-  autoSave();
-}
-
-function renderPanels() {
-  const el = document.getElementById('panels');
-  let html = '';
-  TASKS.forEach((t, ti) => {
-    html += `<div class="panel" id="panel-${ti}">`;
-    html += `<div class="task-card">`;
-    html += `<h3><a href="https://picpay.atlassian.net/browse/${t.key}" target="_blank">${t.key}</a> — ${t.summary}</h3>`;
-    html += `<div class="task-key">Task ${ti+1} de ${TASKS.length}</div>`;
-    html += `<div class="vote-grid">`;
-    for (let di = 0; di < 3; di++) {
-      html += `<div class="vote-col">`;
-      html += `<div class="dev-name dev-label-${di}">${getDevName(di)}</div>`;
-      html += `<div class="vote-row"><label>Complexidade (dias de 1 dev)</label><div class="fib-btns">`;
-      FIB.forEach(f => {
-        const sel = votes[ti][di].complexity === f ? ' selected' : '';
-        html += `<button class="fib-btn${sel}" data-task="${ti}" data-dev="${di}" data-val="${f}" onclick="voteComplexity(${ti},${di},${f})">${f}</button>`;
-      });
-      html += `</div></div>`;
-      html += `<div class="vote-row"><label>Prioridade</label><div class="pri-btns">`;
-      PRI.forEach(p => {
-        const sel = votes[ti][di].priority === p.val ? ' selected' : '';
-        html += `<button class="pri-btn${sel}" data-task="${ti}" data-dev="${di}" data-val="${p.val}" onclick="votePriority(${ti},${di},${p.val})">${p.label}</button>`;
-      });
-      html += `</div></div>`;
-      html += `</div>`;
-    }
-    html += `</div>`;
-    html += `<div class="results-strip" id="results-${ti}">${calcResultsHTML(ti)}</div>`;
-    // Nav buttons
-    html += `<div class="nav-btns">`;
-    if (ti > 0) html += `<button class="btn btn-secondary" onclick="switchTab(${ti-1})">&larr; Anterior</button>`;
-    else html += `<span></span>`;
-    if (ti < TASKS.length - 1) html += `<button class="btn btn-primary" onclick="switchTab(${ti+1})">Proxima &rarr;</button>`;
-    else html += `<button class="btn btn-primary" style="background:var(--green)" onclick="switchTab('dash')">Ver Prazo Final &rarr;</button>`;
-    html += `</div>`;
-    html += `</div></div>`;
-  });
-  el.innerHTML = html;
-}
-
-function switchTab(idx) {
-  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-  if (idx === 'dash') {
-    document.querySelector('[data-idx="dash"]').classList.add('active');
-    document.getElementById('dashboard-panel').classList.add('active');
-    recalcAll();
-  } else {
-    document.querySelector(`[data-idx="${idx}"]`).classList.add('active');
-    document.getElementById(`panel-${idx}`).classList.add('active');
-  }
-}
-
-function voteComplexity(ti, di, val) {
-  votes[ti][di].complexity = votes[ti][di].complexity === val ? null : val;
-  refreshTask(ti);
-  autoSave();
-}
-
-function votePriority(ti, di, val) {
-  votes[ti][di].priority = votes[ti][di].priority === val ? null : val;
-  refreshTask(ti);
-  autoSave();
-}
-
-function refreshTask(ti) {
-  for (let di = 0; di < 3; di++) {
-    document.querySelectorAll(`.fib-btn[data-task="${ti}"][data-dev="${di}"]`).forEach(btn => {
-      btn.classList.toggle('selected', parseInt(btn.dataset.val) === votes[ti][di].complexity);
-    });
-    document.querySelectorAll(`.pri-btn[data-task="${ti}"][data-dev="${di}"]`).forEach(btn => {
-      btn.classList.toggle('selected', parseInt(btn.dataset.val) === votes[ti][di].priority);
-    });
-  }
-  document.getElementById(`results-${ti}`).innerHTML = calcResultsHTML(ti);
-  renderTabs();
-}
-
-function calcResultsHTML(ti) {
-  const cv = votes[ti].map(d => d.complexity).filter(v => v !== null);
-  const pv = votes[ti].map(d => d.priority).filter(v => v !== null);
-  if (cv.length === 0 && pv.length === 0) return '<span class="result-item" style="color:var(--text2)">Aguardando votos...</span>';
-  let html = '';
-  if (cv.length > 0) {
-    const avg = (cv.reduce((a,b) => a+b, 0) / cv.length).toFixed(1);
-    const spread = Math.max(...cv) - Math.min(...cv);
-    const cls = spread <= 2 ? 'yes' : 'no';
-    const txt = spread <= 2 ? 'Consenso' : 'Divergencia — discutam!';
-    html += `<span class="result-item">Complexidade: <span class="val blue">${avg} dias</span> <small>(${cv.join(', ')})</small></span>`;
-    html += `<span class="consensus ${cls}">${txt}</span>`;
-  }
-  if (pv.length > 0) {
-    const avg = (pv.reduce((a,b) => a+b, 0) / pv.length).toFixed(1);
-    const color = avg >= 4 ? 'red' : avg >= 3 ? 'orange' : 'green';
-    html += `<span class="result-item">Prioridade: <span class="val ${color}">${avg}</span></span>`;
-  }
-  if (cv.length > 0 && pv.length > 0) {
-    const cAvg = cv.reduce((a,b) => a+b, 0) / cv.length;
-    const pAvg = pv.reduce((a,b) => a+b, 0) / pv.length;
-    html += `<span class="result-item">WSJF: <span class="val green">${(pAvg/cAvg).toFixed(2)}</span></span>`;
-  }
-  return html;
-}
-
-function getTaskMetrics(ti) {
-  const cv = votes[ti].map(d => d.complexity).filter(v => v !== null);
-  const pv = votes[ti].map(d => d.priority).filter(v => v !== null);
-  const cAvg = cv.length > 0 ? cv.reduce((a,b) => a+b, 0) / cv.length : 0;
-  const pAvg = pv.length > 0 ? pv.reduce((a,b) => a+b, 0) / pv.length : 0;
-  const wsjf = cAvg > 0 ? pAvg / cAvg : 0;
-  const cSpread = cv.length > 0 ? Math.max(...cv) - Math.min(...cv) : 0;
-  const consensus = cSpread <= 2;
-  const voted = cv.length === 3 && pv.length === 3;
-  return { cAvg, pAvg, wsjf, consensus, voted };
-}
-
-function addBusinessDays(start, days) {
-  const d = new Date(start);
-  let added = 0;
-  while (added < days) {
-    d.setDate(d.getDate() + 1);
-    const dow = d.getDay();
-    const iso = d.toISOString().split('T')[0];
-    if (dow !== 0 && dow !== 6 && !HOLIDAYS.has(iso)) added++;
-  }
-  return d;
-}
-
-function formatDate(d) {
-  return d.toLocaleDateString('pt-BR', { weekday: 'short', day: '2-digit', month: 'short', year: 'numeric' });
-}
-
-function recalcAll() {
-  const devCount = parseInt(document.getElementById('devCount').value) || 3;
-  const startStr = document.getElementById('startDate').value;
-  const startDate = startStr ? new Date(startStr + 'T12:00:00') : new Date();
-
-  const metrics = TASKS.map((t, i) => ({ ...t, idx: i, ...getTaskMetrics(i) }));
-
-  // Total dev-days (sum of all complexity averages)
-  const totalDevDays = metrics.reduce((s, m) => s + m.cAvg, 0);
-  // Calendar days with parallelism
-  const calendarDays = Math.ceil(totalDevDays / devCount);
-  const endDate = addBusinessDays(startDate, calendarDays);
-
-  const votedCount = metrics.filter(m => m.voted).length;
-
-  // Sort by WSJF desc for priority
-  const sorted = [...metrics].sort((a, b) => b.wsjf - a.wsjf);
-  const maxWsjf = sorted.length > 0 && sorted[0].wsjf > 0 ? sorted[0].wsjf : 1;
-
-  // Build timeline (accumulated days)
-  let accDays = 0;
-  const timeline = sorted.map(m => {
-    const taskCalDays = Math.ceil(m.cAvg / devCount);
-    accDays += taskCalDays;
-    const taskEndDate = addBusinessDays(startDate, accDays);
-    return { ...m, taskCalDays, accDays, taskEndDate };
-  });
-
-  // Weeks and months
-  const weeks = (calendarDays / 5).toFixed(1);
-  const months = (calendarDays / 22).toFixed(1);
-
-  let html = '';
-
-  // Summary cards
-  html += `<div class="summary-cards">
-    <div class="summary-card">
-      <div class="label">Tasks Votadas</div>
-      <div class="value" style="color:var(--accent2)">${votedCount}/${TASKS.length}</div>
-      <div class="sub">${votedCount < TASKS.length ? 'Faltam ' + (TASKS.length - votedCount) + ' tasks' : 'Todas votadas!'}</div>
-    </div>
-    <div class="summary-card">
-      <div class="label">Total Dev-Dias</div>
-      <div class="value" style="color:var(--blue)">${totalDevDays.toFixed(0)}</div>
-      <div class="sub">soma de todas as complexidades</div>
-    </div>
-    <div class="summary-card">
-      <div class="label">Prazo com ${devCount} devs</div>
-      <div class="value" style="color:var(--orange)">${calendarDays} dias uteis</div>
-      <div class="sub">~${weeks} semanas &bull; ~${months} meses</div>
-    </div>
-    <div class="summary-card" style="border-color:var(--green)">
-      <div class="label">Data de Entrega</div>
-      <div class="deadline">${formatDate(endDate)}</div>
-      <div class="sub">inicio: ${formatDate(startDate)}</div>
-      <div class="sub" style="margin-top:8px;font-size:0.75rem;color:var(--text2)">Considera feriados nacionais BR</div>
-    </div>
-  </div>`;
-
-  // Ranking table
-  html += `<div style="margin-bottom:32px">
-    <h2 style="font-size:1.1rem;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid var(--border)">Ranking de Priorizacao (WSJF — fazer de cima pra baixo)</h2>
-    <table class="priority-table">
-      <thead><tr>
-        <th>#</th><th>Task</th><th>Complexidade (dias)</th><th>Prioridade</th><th>WSJF Score</th><th>Consenso</th>
-      </tr></thead><tbody>`;
-
-  sorted.forEach((m, i) => {
-    const rankCls = i < 3 ? `r${i+1}` : 'rn';
-    const barPct = maxWsjf > 0 ? (m.wsjf / maxWsjf * 100) : 0;
-    const barColor = i < 3 ? 'var(--red)' : i < 8 ? 'var(--orange)' : 'var(--green)';
-    const consensusHTML = m.voted
-      ? (m.consensus ? '<span class="consensus yes">OK</span>' : '<span class="consensus no">Revisar</span>')
-      : '<span style="color:var(--text2);font-size:0.78rem">Pendente</span>';
-    html += `<tr>
-      <td><span class="rank ${rankCls}">${i+1}</span></td>
-      <td><strong>${m.key}</strong> — ${m.summary}</td>
-      <td>${m.cAvg.toFixed(1)}d</td>
-      <td>${m.pAvg.toFixed(1)}</td>
-      <td><div style="display:flex;align-items:center;gap:8px">
-        <span style="font-weight:700">${m.wsjf.toFixed(2)}</span>
-        <div class="score-bar"><div class="score-bar-fill" style="width:${barPct}%;background:${barColor}"></div></div>
-      </div></td>
-      <td>${consensusHTML}</td>
-    </tr>`;
-  });
-
-  html += `</tbody></table></div>`;
-
-  // Timeline
-  html += `<div style="margin-bottom:32px">
-    <h2 style="font-size:1.1rem;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid var(--border)">Linha do Tempo (ordem sugerida de execucao)</h2>
-    <div class="timeline-block">
-      <h4>Inicio: ${formatDate(startDate)} &rarr; Entrega: ${formatDate(endDate)}</h4>`;
-
-  timeline.forEach((m, i) => {
-    html += `<div class="tl-item">
-      <span class="tl-num">${i+1}.</span>
-      <span class="tl-key">${m.key}</span>
-      <span class="tl-name">${m.summary}</span>
-      <span class="tl-days">${m.cAvg.toFixed(0)}d</span>
-      <span class="tl-acc">ate ${formatDate(m.taskEndDate)}</span>
-    </div>`;
-  });
-
-  html += `</div></div>`;
-
-  // Scenario comparison
-  html += `<div style="margin-bottom:32px">
-    <h2 style="font-size:1.1rem;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid var(--border)">Cenarios por qtd de devs</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px">`;
-
-  [1, 2, 3, 4, 5].forEach(n => {
-    const days = Math.ceil(totalDevDays / n);
-    const end = addBusinessDays(startDate, days);
-    const active = n === devCount;
-    html += `<div style="background:${active ? 'var(--accent)' : 'var(--surface)'};border:1px solid ${active ? 'var(--accent)' : 'var(--border)'};border-radius:12px;padding:16px;text-align:center">
-      <div style="font-size:0.78rem;color:${active ? 'rgba(255,255,255,.7)' : 'var(--text2)'};text-transform:uppercase">${n} dev${n>1?'s':''}</div>
-      <div style="font-size:1.5rem;font-weight:700;margin:4px 0">${days} dias</div>
-      <div style="font-size:0.82rem;color:${active ? 'rgba(255,255,255,.8)' : 'var(--text2)'}">${formatDate(end)}</div>
-      <div style="font-size:0.75rem;color:${active ? 'rgba(255,255,255,.6)' : 'var(--text2)'};margin-top:2px">~${(days/5).toFixed(1)} semanas</div>
-    </div>`;
-  });
-
-  html += `</div></div>`;
-
-  document.getElementById('dashboard-panel').innerHTML = html;
-  autoSave();
-}
-
-function autoSave() { saveState(true); }
-
-function saveState(silent) {
-  const state = {
-    votes,
-    devNames: [getDevName(0), getDevName(1), getDevName(2)],
-    devCount: document.getElementById('devCount').value,
-    startDate: document.getElementById('startDate').value,
-  };
-  localStorage.setItem('shop1281_planning_v2', JSON.stringify(state));
-  if (!silent) showToast('Progresso salvo!');
-}
-
-function loadState() {
-  const raw = localStorage.getItem('shop1281_planning_v2');
-  if (!raw) return;
-  try {
-    const s = JSON.parse(raw);
-    // Migrate old votes (15 tasks) to new array (20 tasks) by key
-    if (s.votes) {
-      if (s.votes.length < TASKS.length) {
-        // Old format: votes indexed by old position, migrate by key
-        const migrated = TASKS.map(() => [
-          { complexity: null, priority: null },
-          { complexity: null, priority: null },
-          { complexity: null, priority: null },
-        ]);
-        OLD_KEYS.forEach((key, oldIdx) => {
-          const newIdx = TASKS.findIndex(t => t.key === key);
-          if (newIdx !== -1 && s.votes[oldIdx]) {
-            migrated[newIdx] = s.votes[oldIdx];
-          }
-        });
-        votes = migrated;
-      } else {
-        votes = s.votes;
-      }
-    }
-    setTimeout(() => {
-      if (s.devNames) {
-        document.getElementById('dev1name').value = s.devNames[0];
-        document.getElementById('dev2name').value = s.devNames[1];
-        document.getElementById('dev3name').value = s.devNames[2];
-      }
-      if (s.devCount) document.getElementById('devCount').value = s.devCount;
-      if (s.startDate) document.getElementById('startDate').value = s.startDate;
-    }, 0);
-  } catch(e) {}
-}
-
-function resetAll() {
-  if (!confirm('Resetar todos os votos?')) return;
-  votes = TASKS.map(() => [
-    { complexity: null, priority: null },
-    { complexity: null, priority: null },
-    { complexity: null, priority: null },
-  ]);
-  localStorage.removeItem('shop1281_planning_v2');
-  renderPanels();
-  renderTabs();
-  showToast('Votos resetados');
-}
-
-function exportCSV() {
-  const devCount = parseInt(document.getElementById('devCount').value) || 3;
-  let csv = 'Key,Summary,Dev1_Complexidade,Dev1_Prioridade,Dev2_Complexidade,Dev2_Prioridade,Dev3_Complexidade,Dev3_Prioridade,Media_Complexidade_Dias,Media_Prioridade,WSJF\n';
-  TASKS.forEach((t, i) => {
-    const m = getTaskMetrics(i);
-    csv += `${t.key},"${t.summary}",${votes[i][0].complexity||''},${votes[i][0].priority||''},${votes[i][1].complexity||''},${votes[i][1].priority||''},${votes[i][2].complexity||''},${votes[i][2].priority||''},${m.cAvg.toFixed(1)},${m.pAvg.toFixed(1)},${m.wsjf.toFixed(2)}\n`;
-  });
-  const blob = new Blob([csv], { type: 'text/csv' });
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = 'SHOP-1281_planning_poker.csv';
-  a.click();
-  showToast('CSV exportado!');
-}
-
-function showToast(msg) {
-  const el = document.getElementById('toast');
-  el.textContent = msg;
-  el.classList.add('show');
-  setTimeout(() => el.classList.remove('show'), 2500);
-}
-
+const TASKS=[{key:'SHOP-1283',summary:'Criar documentacao sobre o projeto'},{key:'SHOP-1284',summary:'Criar microsservico no Moonlight'},{key:'SHOP-1285',summary:'Levantar endpoints do Houston para manipular audiencia'},{key:'SHOP-1286',summary:'Pedir para criar banco de dados (Mongo)'},{key:'SHOP-1287',summary:'Criar SQS para ler do SNS do Core'},{key:'SHOP-1288',summary:'Definir estrutura dos dados no banco de dados'},{key:'SHOP-1289',summary:'Criar Worker para ficar lendo as mensagens do SQS'},{key:'SHOP-1290',summary:'Criar Worker para remover usuarios da audiencia'},{key:'SHOP-1291',summary:'Criar solucao para reprocessamento dos casos com falha na inclusao das audiencias'},{key:'SHOP-1292',summary:'Criar endpoint de envio para audiencia'},{key:'SHOP-1293',summary:'Criar endpoint para remocao de audiencia'},{key:'SHOP-1294',summary:'Criar TTL no banco de dados'},{key:'SHOP-1295',summary:'Criar endpoint para definir se o usuario pode usar a campanha'},{key:'SHOP-1296',summary:'Validar o uso do SDD no projeto'},{key:'SHOP-1298',summary:'Criar metricas, dashboards e alertas'},{key:'SHOP-1301',summary:'Reprocessamento das Falhas de Remover da audiencia'},{key:'SHOP-1302',summary:'rollout para PROD'},{key:'SHOP-1303',summary:'Adicionar tags na infra do projeto'},{key:'SHOP-1304',summary:'Criar runbooks no Hoop'},{key:'SHOP-1305',summary:'Criar Appsmith'}];
+const FIB=[1,2,3,5,8,13,21];
+const PRI=[{val:5,label:'Critica'},{val:4,label:'Alta'},{val:3,label:'Media'},{val:2,label:'Baixa'},{val:1,label:'Opcional'}];
+const HOLIDAYS=new Set(['2025-01-01','2025-03-03','2025-03-04','2025-04-18','2025-04-21','2025-05-01','2025-06-19','2025-09-07','2025-10-12','2025-11-02','2025-11-15','2025-11-20','2025-12-25','2026-01-01','2026-02-16','2026-02-17','2026-04-03','2026-04-21','2026-05-01','2026-06-04','2026-09-07','2026-10-12','2026-11-02','2026-11-15','2026-11-20','2026-12-25']);
+let votes=TASKS.map(()=>[{complexity:null,priority:null},{complexity:null,priority:null},{complexity:null,priority:null}]);
+let taskStatus=TASKS.map(()=>'pending');
+let taskDoneDate=TASKS.map(()=>null);
+const BIN_ID='69ef6b97856a6821897aa9a4';
+const BIN_URL=`https://api.jsonbin.io/v3/b/${BIN_ID}`;
+const ACCESS_KEY='$2a$10$RHuMTZcrwFWmnm7nC6H2Nu6l9SbeHWyl6WNE7KcV8V35FJx39qZRu';
+let _saveTimer=null;
+let _saving=false;
+function setSyncStatus(cls,text){const el=document.getElementById('syncStatus');el.className='sync-indicator '+cls;el.textContent=text;if(cls==='saved')setTimeout(()=>{el.textContent='Sincronizado';},1500);}
+async function init(){const today=new Date();document.getElementById('startDate').value=today.toISOString().split('T')[0];await loadState();renderTabs();renderPanels();switchTab(0);}
+function renderTabs(){const el=document.getElementById('tabs');let html='';TASKS.forEach((t,i)=>{const voted=isTaskVoted(i);const done=taskStatus[i]==='done';let badge=done?'<span class="badge" style="background:var(--green)">DONE</span>':voted?'<span class="badge">OK</span>':'';const style=done?'opacity:0.5;':'';html+=`<div class="tab" data-idx="${i}" onclick="switchTab(${i})" style="${style}">${t.key}${badge}</div>`;});html+=`<div class="tab" data-idx="dash" onclick="switchTab('dash')" style="background:var(--green);color:#000;border-color:var(--green);font-weight:700">PRAZO FINAL</div>`;html+=`<div class="tab" data-idx="burn" onclick="switchTab('burn')" style="background:var(--orange);color:#000;border-color:var(--orange);font-weight:700">BURNDOWN</div>`;el.innerHTML=html;}
+function isTaskVoted(ti){return votes[ti].every(d=>d.complexity!==null&&d.priority!==null);}
+function getDevName(di){return document.getElementById(`dev${di+1}name`)?.value||`Dev ${di+1}`;}
+function updateDevNames(){for(let di=0;di<3;di++){document.querySelectorAll(`.dev-label-${di}`).forEach(el=>el.textContent=getDevName(di));}autoSave();}
+function renderPanels(){const el=document.getElementById('panels');let html='';TASKS.forEach((t,ti)=>{html+=`<div class="panel" id="panel-${ti}">`;html+=`<div class="task-card">`;html+=`<h3><a href="https://picpay.atlassian.net/browse/${t.key}" target="_blank">${t.key}</a> — ${t.summary}`;const isDone=taskStatus[ti]==='done';html+=`<label class="status-toggle" onclick="event.stopPropagation()"><span class="toggle-label-left ${isDone?'inactive':''}">Pendente</span><input type="checkbox" ${isDone?'checked':''} onchange="toggleStatus(${ti})"><span class="toggle-track ${isDone?'done':''}"><span class="toggle-thumb"></span></span><span class="toggle-label-right ${isDone?'active':''}">Done</span></label></h3>`;if(isDone)html+=`<div class="task-done-banner">Task concluida${taskDoneDate[ti]?' em '+new Date(taskDoneDate[ti]).toLocaleDateString('pt-BR'):''}</div>`;html+=`<div class="task-key">Task ${ti+1} de ${TASKS.length}</div>`;html+=`<div class="vote-grid">`;for(let di=0;di<3;di++){html+=`<div class="vote-col">`;html+=`<div class="dev-name dev-label-${di}">${getDevName(di)}</div>`;html+=`<div class="vote-row"><label>Complexidade (dias de 1 dev)</label><div class="fib-btns">`;FIB.forEach(f=>{const sel=votes[ti][di].complexity===f?' selected':'';html+=`<button class="fib-btn${sel}" data-task="${ti}" data-dev="${di}" data-val="${f}" onclick="voteComplexity(${ti},${di},${f})">${f}</button>`;});html+=`</div></div>`;html+=`<div class="vote-row"><label>Prioridade</label><div class="pri-btns">`;PRI.forEach(p=>{const sel=votes[ti][di].priority===p.val?' selected':'';html+=`<button class="pri-btn${sel}" data-task="${ti}" data-dev="${di}" data-val="${p.val}" onclick="votePriority(${ti},${di},${p.val})">${p.label}</button>`;});html+=`</div></div></div>`;}html+=`</div>`;html+=`<div class="results-strip" id="results-${ti}">${calcResultsHTML(ti)}</div>`;html+=`<div class="nav-btns">`;if(ti>0)html+=`<button class="btn btn-secondary" onclick="switchTab(${ti-1})">&larr; Anterior</button>`;else html+=`<span></span>`;if(ti<TASKS.length-1)html+=`<button class="btn btn-primary" onclick="switchTab(${ti+1})">Proxima &rarr;</button>`;else html+=`<button class="btn btn-primary" style="background:var(--green)" onclick="switchTab('dash')">Ver Prazo Final &rarr;</button>`;html+=`</div></div></div>`;});el.innerHTML=html;}
+function switchTab(idx){document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));if(idx==='dash'){document.querySelector('[data-idx="dash"]').classList.add('active');document.getElementById('dashboard-panel').classList.add('active');recalcAll();}else if(idx==='burn'){document.querySelector('[data-idx="burn"]').classList.add('active');document.getElementById('burndown-panel').classList.add('active');renderBurndown();}else{document.querySelector(`[data-idx="${idx}"]`).classList.add('active');document.getElementById(`panel-${idx}`).classList.add('active');}}
+function toggleStatus(ti){if(taskStatus[ti]==='done'){taskStatus[ti]='pending';taskDoneDate[ti]=null;}else{taskStatus[ti]='done';taskDoneDate[ti]=new Date().toISOString();}const panel=document.getElementById(`panel-${ti}`);if(panel){const isDone=taskStatus[ti]==='done';const track=panel.querySelector('.toggle-track');const leftLabel=panel.querySelector('.toggle-label-left');const rightLabel=panel.querySelector('.toggle-label-right');const checkbox=panel.querySelector('.status-toggle input');const banner=panel.querySelector('.task-done-banner');if(track)track.classList.toggle('done',isDone);if(leftLabel)leftLabel.classList.toggle('inactive',isDone);if(rightLabel)rightLabel.classList.toggle('active',isDone);if(checkbox)checkbox.checked=isDone;if(isDone&&!banner){const h3=panel.querySelector('h3');const div=document.createElement('div');div.className='task-done-banner';div.textContent='Task concluida em '+new Date().toLocaleDateString('pt-BR');h3.insertAdjacentElement('afterend',div);}else if(!isDone&&banner){banner.remove();}}renderTabs();autoSave();}
+function voteComplexity(ti,di,val){votes[ti][di].complexity=votes[ti][di].complexity===val?null:val;refreshTask(ti);autoSave();}
+function votePriority(ti,di,val){votes[ti][di].priority=votes[ti][di].priority===val?null:val;refreshTask(ti);autoSave();}
+function refreshTask(ti){for(let di=0;di<3;di++){document.querySelectorAll(`.fib-btn[data-task="${ti}"][data-dev="${di}"]`).forEach(btn=>{btn.classList.toggle('selected',parseInt(btn.dataset.val)===votes[ti][di].complexity);});document.querySelectorAll(`.pri-btn[data-task="${ti}"][data-dev="${di}"]`).forEach(btn=>{btn.classList.toggle('selected',parseInt(btn.dataset.val)===votes[ti][di].priority);});}document.getElementById(`results-${ti}`).innerHTML=calcResultsHTML(ti);renderTabs();}
+function calcResultsHTML(ti){const cv=votes[ti].map(d=>d.complexity).filter(v=>v!==null);const pv=votes[ti].map(d=>d.priority).filter(v=>v!==null);if(cv.length===0&&pv.length===0)return'<span class="result-item" style="color:var(--text2)">Aguardando votos...</span>';let html='';if(cv.length>0){const avg=(cv.reduce((a,b)=>a+b,0)/cv.length).toFixed(1);const spread=Math.max(...cv)-Math.min(...cv);const cls=spread<=2?'yes':'no';const txt=spread<=2?'Consenso':'Divergencia — discutam!';html+=`<span class="result-item">Complexidade: <span class="val blue">${avg} dias</span> <small>(${cv.join(', ')})</small></span>`;html+=`<span class="consensus ${cls}">${txt}</span>`;}if(pv.length>0){const avg=(pv.reduce((a,b)=>a+b,0)/pv.length).toFixed(1);const color=avg>=4?'red':avg>=3?'orange':'green';html+=`<span class="result-item">Prioridade: <span class="val ${color}">${avg}</span></span>`;}if(cv.length>0&&pv.length>0){const cAvg=cv.reduce((a,b)=>a+b,0)/cv.length;const pAvg=pv.reduce((a,b)=>a+b,0)/pv.length;html+=`<span class="result-item">WSJF: <span class="val green">${(pAvg/cAvg).toFixed(2)}</span></span>`;}return html;}
+function getTaskMetrics(ti){const cv=votes[ti].map(d=>d.complexity).filter(v=>v!==null);const pv=votes[ti].map(d=>d.priority).filter(v=>v!==null);const cAvg=cv.length>0?cv.reduce((a,b)=>a+b,0)/cv.length:0;const pAvg=pv.length>0?pv.reduce((a,b)=>a+b,0)/pv.length:0;const wsjf=cAvg>0?pAvg/cAvg:0;const cSpread=cv.length>0?Math.max(...cv)-Math.min(...cv):0;const consensus=cSpread<=2;const voted=cv.length===3&&pv.length===3;return{cAvg,pAvg,wsjf,consensus,voted};}
+function addBusinessDays(start,days){const d=new Date(start);let added=0;while(added<days){d.setDate(d.getDate()+1);const dow=d.getDay();const iso=d.toISOString().split('T')[0];if(dow!==0&&dow!==6&&!HOLIDAYS.has(iso))added++;}return d;}
+function formatDate(d){return d.toLocaleDateString('pt-BR',{weekday:'short',day:'2-digit',month:'short',year:'numeric'});}
+function recalcAll(){const devCount=parseInt(document.getElementById('devCount').value)||3;const startStr=document.getElementById('startDate').value;const startDate=startStr?new Date(startStr+'T12:00:00'):new Date();const metrics=TASKS.map((t,i)=>({...t,idx:i,...getTaskMetrics(i)}));const totalDevDays=metrics.reduce((s,m)=>s+m.cAvg,0);const calendarDays=Math.ceil(totalDevDays/devCount);const endDate=addBusinessDays(startDate,calendarDays);const votedCount=metrics.filter(m=>m.voted).length;const sorted=[...metrics].sort((a,b)=>b.wsjf-a.wsjf);const maxWsjf=sorted.length>0&&sorted[0].wsjf>0?sorted[0].wsjf:1;let accDays=0;const timeline=sorted.map(m=>{const taskCalDays=Math.ceil(m.cAvg/devCount);accDays+=taskCalDays;const taskEndDate=addBusinessDays(startDate,accDays);return{...m,taskCalDays,accDays,taskEndDate};});const weeks=(calendarDays/5).toFixed(1);const months=(calendarDays/22).toFixed(1);let html='';html+=`<div class="summary-cards"><div class="summary-card"><div class="label">Tasks Votadas</div><div class="value" style="color:var(--accent2)">${votedCount}/${TASKS.length}</div><div class="sub">${votedCount<TASKS.length?'Faltam '+(TASKS.length-votedCount)+' tasks':'Todas votadas!'}</div></div><div class="summary-card"><div class="label">Total Dev-Dias</div><div class="value" style="color:var(--blue)">${totalDevDays.toFixed(0)}</div><div class="sub">soma de todas as complexidades</div></div><div class="summary-card"><div class="label">Prazo com ${devCount} devs</div><div class="value" style="color:var(--orange)">${calendarDays} dias uteis</div><div class="sub">~${weeks} semanas &bull; ~${months} meses</div></div><div class="summary-card" style="border-color:var(--green)"><div class="label">Data de Entrega</div><div class="deadline">${formatDate(endDate)}</div><div class="sub">inicio: ${formatDate(startDate)}</div><div class="sub" style="margin-top:8px;font-size:0.75rem;color:var(--text2)">Considera feriados nacionais BR</div></div></div>`;html+=`<div style="margin-bottom:32px"><h2 style="font-size:1.1rem;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid var(--border)">Ranking de Priorizacao (WSJF — fazer de cima pra baixo)</h2><table class="priority-table"><thead><tr><th>#</th><th>Task</th><th>Complexidade (dias)</th><th>Prioridade</th><th>WSJF Score</th><th>Consenso</th></tr></thead><tbody>`;sorted.forEach((m,i)=>{const rankCls=i<3?`r${i+1}`:'rn';const barPct=maxWsjf>0?(m.wsjf/maxWsjf*100):0;const barColor=i<3?'var(--red)':i<8?'var(--orange)':'var(--green)';const consensusHTML=m.voted?(m.consensus?'<span class="consensus yes">OK</span>':'<span class="consensus no">Revisar</span>'):'<span style="color:var(--text2);font-size:0.78rem">Pendente</span>';html+=`<tr><td><span class="rank ${rankCls}">${i+1}</span></td><td><strong>${m.key}</strong> — ${m.summary}</td><td>${m.cAvg.toFixed(1)}d</td><td>${m.pAvg.toFixed(1)}</td><td><div style="display:flex;align-items:center;gap:8px"><span style="font-weight:700">${m.wsjf.toFixed(2)}</span><div class="score-bar"><div class="score-bar-fill" style="width:${barPct}%;background:${barColor}"></div></div></div></td><td>${consensusHTML}</td></tr>`;});html+=`</tbody></table></div>`;html+=`<div style="margin-bottom:32px"><h2 style="font-size:1.1rem;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid var(--border)">Linha do Tempo (ordem sugerida de execucao)</h2><div class="timeline-block"><h4>Inicio: ${formatDate(startDate)} &rarr; Entrega: ${formatDate(endDate)}</h4>`;timeline.forEach((m,i)=>{html+=`<div class="tl-item"><span class="tl-num">${i+1}.</span><span class="tl-key">${m.key}</span><span class="tl-name">${m.summary}</span><span class="tl-days">${m.cAvg.toFixed(0)}d</span><span class="tl-acc">ate ${formatDate(m.taskEndDate)}</span></div>`;});html+=`</div></div>`;html+=`<div style="margin-bottom:32px"><h2 style="font-size:1.1rem;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid var(--border)">Cenarios por qtd de devs</h2><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px">`;[1,2,3,4,5].forEach(n=>{const days=Math.ceil(totalDevDays/n);const end=addBusinessDays(startDate,days);const active=n===devCount;html+=`<div style="background:${active?'var(--accent)':'var(--surface)'};border:1px solid ${active?'var(--accent)':'var(--border)'};border-radius:12px;padding:16px;text-align:center"><div style="font-size:0.78rem;color:${active?'rgba(255,255,255,.7)':'var(--text2)'};text-transform:uppercase">${n} dev${n>1?'s':''}</div><div style="font-size:1.5rem;font-weight:700;margin:4px 0">${days} dias</div><div style="font-size:0.82rem;color:${active?'rgba(255,255,255,.8)':'var(--text2)'}">${formatDate(end)}</div><div style="font-size:0.75rem;color:${active?'rgba(255,255,255,.6)':'var(--text2)'};margin-top:2px">~${(days/5).toFixed(1)} semanas</div></div>`;});html+=`</div></div>`;document.getElementById('dashboard-panel').innerHTML=html;autoSave();}
+function autoSave(){clearTimeout(_saveTimer);_saveTimer=setTimeout(()=>saveState(true),1200);}
+async function saveState(silent){if(_saving)return;_saving=true;setSyncStatus('saving','Salvando...');const state={tasks:TASKS.map((t,i)=>({key:t.key,summary:t.summary,votes:votes[i],status:taskStatus[i],doneDate:taskDoneDate[i]})),devNames:[getDevName(0),getDevName(1),getDevName(2)],devCount:parseInt(document.getElementById('devCount').value)||3,startDate:document.getElementById('startDate').value};try{const res=await fetch(BIN_URL,{method:'PUT',headers:{'Content-Type':'application/json','X-Access-Key':ACCESS_KEY},body:JSON.stringify(state)});if(!res.ok)throw new Error(res.status);setSyncStatus('saved','Salvo!');if(!silent)showToast('Progresso salvo na nuvem!');}catch(e){setSyncStatus('error','Erro ao salvar');console.error('JSONBin save error:',e);}finally{_saving=false;}}
+async function loadState(){setSyncStatus('loading','Carregando...');try{const res=await fetch(BIN_URL+'/latest',{headers:{'X-Access-Key':ACCESS_KEY}});if(!res.ok)throw new Error(res.status);const json=await res.json();const s=json.record;if(s.tasks){s.tasks.forEach(t=>{const idx=TASKS.findIndex(x=>x.key===t.key);if(idx===-1)return;if(t.votes)votes[idx]=t.votes;if(t.status)taskStatus[idx]=t.status;if(t.doneDate!==undefined)taskDoneDate[idx]=t.doneDate;});}if(s.devNames){document.getElementById('dev1name').value=s.devNames[0];document.getElementById('dev2name').value=s.devNames[1];document.getElementById('dev3name').value=s.devNames[2];}if(s.devCount)document.getElementById('devCount').value=s.devCount;if(s.startDate)document.getElementById('startDate').value=s.startDate;setSyncStatus('saved','Sincronizado');}catch(e){setSyncStatus('error','Erro ao carregar');console.error('JSONBin load error:',e);}}
+function resetAll(){if(!confirm('Resetar todos os votos e status?'))return;votes=TASKS.map(()=>[{complexity:null,priority:null},{complexity:null,priority:null},{complexity:null,priority:null}]);taskStatus=TASKS.map(()=>'pending');taskDoneDate=TASKS.map(()=>null);renderPanels();renderTabs();saveState(false);showToast('Votos e status resetados');}
+function exportCSV(){let csv='Key,Summary,Dev1_Complexidade,Dev1_Prioridade,Dev2_Complexidade,Dev2_Prioridade,Dev3_Complexidade,Dev3_Prioridade,Media_Complexidade_Dias,Media_Prioridade,WSJF\n';TASKS.forEach((t,i)=>{const m=getTaskMetrics(i);csv+=`${t.key},"${t.summary}",${votes[i][0].complexity||''},${votes[i][0].priority||''},${votes[i][1].complexity||''},${votes[i][1].priority||''},${votes[i][2].complexity||''},${votes[i][2].priority||''},${m.cAvg.toFixed(1)},${m.pAvg.toFixed(1)},${m.wsjf.toFixed(2)}\n`;});const blob=new Blob([csv],{type:'text/csv'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='SHOP-1281_planning_poker.csv';a.click();showToast('CSV exportado!');}
+function renderBurndown(){const devCount=parseInt(document.getElementById('devCount').value)||3;const startStr=document.getElementById('startDate').value;const startDate=startStr?new Date(startStr+'T12:00:00'):new Date();const metrics=TASKS.map((t,i)=>({...t,idx:i,...getTaskMetrics(i)}));const totalDevDays=metrics.reduce((s,m)=>s+m.cAvg,0);const totalCalDays=Math.ceil(totalDevDays/devCount);const doneTasks=metrics.filter((m,i)=>taskStatus[i]==='done');const donePoints=doneTasks.reduce((s,m)=>s+m.cAvg,0);const remainingPoints=totalDevDays-donePoints;const remainingDays=Math.ceil(remainingPoints/devCount);const pctDone=totalDevDays>0?(donePoints/totalDevDays*100):0;const endDate=addBusinessDays(startDate,totalCalDays);let html='';html+=`<div class="burndown-stats"><div class="bd-stat"><div class="bd-label">Total planejado</div><div class="bd-val" style="color:var(--blue)">${totalDevDays.toFixed(0)} pts</div></div><div class="bd-stat"><div class="bd-label">Concluido</div><div class="bd-val" style="color:var(--green)">${donePoints.toFixed(0)} pts</div></div><div class="bd-stat"><div class="bd-label">Restante</div><div class="bd-val" style="color:var(--orange)">${remainingPoints.toFixed(0)} pts</div></div><div class="bd-stat"><div class="bd-label">Progresso</div><div class="bd-val" style="color:${pctDone>=80?'var(--green)':pctDone>=40?'var(--orange)':'var(--red)'}">${pctDone.toFixed(0)}%</div></div><div class="bd-stat"><div class="bd-label">Tasks done</div><div class="bd-val" style="color:var(--green)">${doneTasks.length}/${TASKS.length}</div></div><div class="bd-stat"><div class="bd-label">Dias restantes</div><div class="bd-val" style="color:var(--orange)">${remainingDays}d</div></div></div>`;html+=`<div style="margin-bottom:24px"><div style="display:flex;justify-content:space-between;font-size:0.78rem;color:var(--text2);margin-bottom:4px"><span>${donePoints.toFixed(0)} / ${totalDevDays.toFixed(0)} pontos</span><span>${pctDone.toFixed(0)}%</span></div><div style="height:12px;background:var(--border);border-radius:6px;overflow:hidden"><div style="height:100%;width:${pctDone}%;background:linear-gradient(90deg,var(--green),var(--accent));border-radius:6px;transition:width .5s"></div></div></div>`;html+=`<div class="burndown-container"><h2>Burndown Chart</h2><div class="bsub">Linha ideal vs progresso real — prazo original: ${totalCalDays} dias uteis (${formatDate(endDate)})</div><canvas id="burndownCanvas" class="burndown-canvas" height="300"></canvas><div class="burndown-legend"><div class="burndown-legend-item"><div class="burndown-legend-dot" style="background:var(--text2)"></div> Ideal</div><div class="burndown-legend-item"><div class="burndown-legend-dot" style="background:var(--green)"></div> Real</div><div class="burndown-legend-item"><div class="burndown-legend-dot" style="background:var(--orange)"></div> Projecao</div></div></div>`;html+=`<div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px"><h2 style="font-size:1.1rem;margin-bottom:16px">Checklist de Tasks</h2>`;const sorted=[...metrics].map((m,i)=>({...m,origIdx:i})).sort((a,b)=>{const aD=taskStatus[a.origIdx]==='done'?0:1;const bD=taskStatus[b.origIdx]==='done'?0:1;if(aD!==bD)return aD-bD;return b.wsjf-a.wsjf;});sorted.forEach(m=>{const i=m.origIdx;const done=taskStatus[i]==='done';const doneDate=taskDoneDate[i]?new Date(taskDoneDate[i]).toLocaleDateString('pt-BR'):'';html+=`<div class="done-list-item" style="${done?'opacity:0.6':''}"><label class="status-toggle" style="margin:0"><span class="toggle-label-left ${done?'inactive':''}" style="font-size:0.7rem">Pendente</span><input type="checkbox" ${done?'checked':''} onchange="toggleStatusBurn(${i})"><span class="toggle-track ${done?'done':''}" style="width:34px;height:18px"><span class="toggle-thumb" style="width:14px;height:14px;${done?'left:18px':'left:2px'}"></span></span><span class="toggle-label-right ${done?'active':''}" style="font-size:0.7rem">Done</span></label><span class="done-key" style="color:${done?'var(--green)':'var(--accent2)'}">${m.key}</span><span style="flex:1;${done?'text-decoration:line-through;color:var(--text2)':''}">${m.summary}</span><span class="done-pts">${m.cAvg.toFixed(0)}pts</span>${done?`<span style="font-size:0.75rem;color:var(--text2);min-width:80px;text-align:right">${doneDate}</span>`:''}</div>`;});html+=`</div>`;document.getElementById('burndown-panel').innerHTML=html;setTimeout(()=>drawBurndownChart(totalDevDays,totalCalDays,donePoints,devCount),50);}
+function toggleStatusBurn(ti){if(taskStatus[ti]==='done'){taskStatus[ti]='pending';taskDoneDate[ti]=null;}else{taskStatus[ti]='done';taskDoneDate[ti]=new Date().toISOString();}renderTabs();autoSave();renderBurndown();}
+function drawBurndownChart(totalPts,totalDays,donePts,devCount){const canvas=document.getElementById('burndownCanvas');if(!canvas)return;const ctx=canvas.getContext('2d');const dpr=window.devicePixelRatio||1;canvas.width=canvas.offsetWidth*dpr;canvas.height=300*dpr;ctx.scale(dpr,dpr);const W=canvas.offsetWidth,H=300;const pad={top:20,right:30,bottom:40,left:50};const cW=W-pad.left-pad.right,cH=H-pad.top-pad.bottom;ctx.fillStyle='#0f1117';ctx.fillRect(0,0,W,H);ctx.strokeStyle='#2e3341';ctx.lineWidth=0.5;for(let i=0;i<=5;i++){const y=pad.top+(cH/5)*i;ctx.beginPath();ctx.moveTo(pad.left,y);ctx.lineTo(W-pad.right,y);ctx.stroke();ctx.fillStyle='#8b8fa3';ctx.font='11px system-ui';ctx.textAlign='right';ctx.fillText((totalPts-(totalPts/5)*i).toFixed(0),pad.left-8,y+4);}const xSteps=Math.min(totalDays,10);ctx.textAlign='center';for(let i=0;i<=xSteps;i++){const day=Math.round((totalDays/xSteps)*i);const x=pad.left+(cW/xSteps)*i;ctx.fillStyle='#8b8fa3';ctx.fillText(`D${day}`,x,H-pad.bottom+20);}ctx.beginPath();ctx.moveTo(pad.left,pad.top);ctx.lineTo(pad.left+cW,pad.top+cH);ctx.strokeStyle='#8b8fa3';ctx.lineWidth=2;ctx.setLineDash([6,4]);ctx.stroke();ctx.setLineDash([]);const startStr=document.getElementById('startDate').value;const startDate=startStr?new Date(startStr+'T12:00:00'):new Date();const today=new Date();let bizDaysElapsed=0;const d=new Date(startDate);while(d<today){d.setDate(d.getDate()+1);const dow=d.getDay();const iso=d.toISOString().split('T')[0];if(dow!==0&&dow!==6&&!HOLIDAYS.has(iso))bizDaysElapsed++;}const todayX=pad.left+(bizDaysElapsed/totalDays)*cW;const todayY=pad.top+(donePts/totalPts)*cH;ctx.beginPath();ctx.moveTo(pad.left,pad.top);ctx.lineTo(Math.min(todayX,pad.left+cW),todayY);ctx.strokeStyle='#00b894';ctx.lineWidth=3;ctx.stroke();ctx.beginPath();ctx.arc(Math.min(todayX,pad.left+cW),todayY,5,0,Math.PI*2);ctx.fillStyle='#00b894';ctx.fill();const remainingPts=totalPts-donePts;if(remainingPts>0&&donePts>0){const projEndDays=bizDaysElapsed+Math.ceil(remainingPts/devCount);const projEndX=pad.left+(projEndDays/totalDays)*cW;ctx.beginPath();ctx.moveTo(Math.min(todayX,pad.left+cW),todayY);ctx.lineTo(Math.min(projEndX,pad.left+cW+30),pad.top+cH);ctx.strokeStyle='#fdcb6e';ctx.lineWidth=2;ctx.setLineDash([4,4]);ctx.stroke();ctx.setLineDash([]);}if(todayX<=pad.left+cW){ctx.beginPath();ctx.moveTo(todayX,pad.top);ctx.lineTo(todayX,H-pad.bottom);ctx.strokeStyle='rgba(108,92,231,0.4)';ctx.lineWidth=1;ctx.setLineDash([3,3]);ctx.stroke();ctx.setLineDash([]);ctx.fillStyle='#6c5ce7';ctx.font='bold 10px system-ui';ctx.textAlign='center';ctx.fillText('HOJE',todayX,pad.top-6);}ctx.fillStyle='#8b8fa3';ctx.font='11px system-ui';ctx.textAlign='center';ctx.fillText('Dias uteis',pad.left+cW/2,H-4);ctx.save();ctx.translate(12,pad.top+cH/2);ctx.rotate(-Math.PI/2);ctx.fillText('Pontos restantes',0,0);ctx.restore();}
+function showToast(msg){const el=document.getElementById('toast');el.textContent=msg;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),2500);}
 init();
 </script>
 </body>
